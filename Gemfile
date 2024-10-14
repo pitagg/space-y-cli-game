@@ -2,7 +2,15 @@
 
 source 'https://rubygems.org'
 
-gem 'rspec'
-gem 'rubocop'
-gem 'rubocop-rspec'
+gem 'aasm'
 gem 'thor'
+
+group :development do
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+end
+
+group :test do
+  gem 'rspec'
+  gem 'simplecov', require: false
+end
